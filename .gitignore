@@ -1,5 +1,6 @@
 __pycache__
-test_params_create
+test_params_create.sql
 file.json
 main_delete.py
 main_place_amenities.py
+test.py

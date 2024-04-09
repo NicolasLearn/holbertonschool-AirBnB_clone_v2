@@ -9,7 +9,14 @@ from models.city import City
 
 
 class State(BaseModel, Base):
-    """ State class """
+    """Represents a state for a MySQL database.
+
+    Public class attributes (with sqlalchemy):
+
+        __tablename__ (str): Name to MySQL table to store States.
+        name (Columns: str): The name of the State.
+        cities (Relationship: state --> city): Links state with city.
+    """
     __tablename__ = "states"
     name = Column(String(128), nullable=False)
     cities = relationship("City", cascade='all, delete, delete-orphan',

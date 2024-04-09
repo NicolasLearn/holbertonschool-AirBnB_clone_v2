@@ -81,8 +81,9 @@ class DBStorage:
         Session = scoped_session(session_factory)
         self.__session = Session()
 
-        def close(self):
-            """
-            Call remove() method on the private session attribute
-            """
-            self.__session.remove()
+    def close(self):
+        """
+        Call close() method, on the private session attribute,
+        to close the SQLAlchemy session.
+        """
+        self.__session.close()
