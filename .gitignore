@@ -1,5 +1,6 @@
 __pycache__
 test_params_create.sql
+100-hbnb.sql
 file.json
 main_delete.py
 main_place_amenities.py
