@@ -17,7 +17,7 @@ def states():
     States are sorted by name.
     """
     states = storage.all("State")
-    return render_template("9-states.html", state=states)
+    return render_template('7-states_list.html', states=states)
 
 
 @app.route("/states/<id>", strict_slashes=False)
@@ -30,7 +30,7 @@ def states_id(id):
 
 
 @app.teardown_appcontext
-def teardown(self):
+def close_session(self):
     """Remove the current SQLAlchemy session."""
     storage.close()
 
